@@ -1,0 +1,113 @@
+---
+title: "Overview - FCARS System"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview - FCARS System}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+knitr::opts_chunk$set(warning = TRUE)
+library(Fatality.Reporting.System)
+# root.dir = '..'
+```
+### Setting the Working directory
+1. You can use the package option root.dir to set the working directory, e.g. opts_knit$set(root.dir = '../Data/')
+
+### Introduction
+This package graphically displays the locations of fatal accidents recorded in the US National Highway Traffic
+Safety Administration's Fatal Analysis Reporting System (FARS). The function accepts a state number and year as parameters.
+
+An example can be seen by executing the following line;
+
+```{r echo=TRUE}
+# Add two numbers together
+add <- function(a, b) a + b
+add(10, 20)
+```
+
+```{r echo=TRUE}
+# Right now I run setwd('../..') at the start of any chunk that loads data
+filename <- "accident_2013_test.csv"
+# getwd()
+# Run Hadleys function (Global Namespace) to change directories
+
+# setwd('../..')
+#  rmarkdown set's the working directory to the location of the Rmd file (separately to knitr)
+fars_read(filename)
+```
+
+### The working directory is;
+```{r}
+getwd()
+```
+The sum of 2 and 2 is;
+```{r}
+fnAdd <- function(x, y) {
+  x + y
+}
+fnAdd(2,2)
+```
+
+
+### Overview
+Vignettes are short tutorials that explain what the package is designed for and how different functions can be used together. 
+Vignette Workflow - 
+To create your first vignette, run:
+usethis::use_vignette("my-vignette")
+1.   This will:
+      a) Create a vignettes/ directory.
+      b) Add the necessary dependencies to DESCRIPTION (i.e. it adds knitr to the Suggests and VignetteBuilder fields).
+      c) Draft a vignette, vignettes/my-vignette.Rmd.
+2. Once you have this file, the workflow is straightforward:
+  a) Modify the vignette.
+  b) Press Ctrl/Cmd + Shift + K (or click ) to knit the vignette and preview the output.
+3. There are three important components to an R Markdown vignette:
+  1) The initial metadata block.
+  2) Markdown for formatting text.
+  3) Knitr for intermingling text, code and results.
+  
+* New List
+* Item 1
+    1. Item a
+    2. Item b
+    
+1.  Item 1.
+    *   Item a
+    *   Item b
+1.  Item 2.
+
+1.  Item 1.
+     1. Item a
+     1. Item b
+1.  Item 2.
+
+
+
+### Working directories
+Your working directory is always getwd() (all output files will be written here), but the code chunks are evaluated under the directory where your input document comes from. Changing working directories while running R code is a bad practice in general. 
+If you do still decide to use setwd in a code chunk, beware that the new working directory will only apply to that specific code chunk, and any following code chunks will revert back to use the original working directory.
+  
+### Error running Knitr in R Studio
+Current versions of knitr and rmarkdown are;
+```{r}
+xfun::session_info(c("rmarkdown", "knitr"))
+```
+
+Solutions was due to a mismatch in versions; 
+Having knitr >= 1.31 installed implies that for vignettes rmarkdown should be >= 2.6.
+
+Showing an example of including R output directly in your text (“inline”) using backticks:
+Successfully upgraded from v2.3 to `r packageVersion('rmarkdown')`
+
+### Testing
+1.    Create a tests/testthat directory.
+
+1.    Adds testthat to the Suggests field in the DESCRIPTION.
+
+1.    Creates a file tests/testthat.R that runs all your tests when R CMD check runs.
+
+
+file.exists("~/.ssh/id_rsa.pub")
+

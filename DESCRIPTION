@@ -1,0 +1,31 @@
+Package: Fatality.Reporting.System
+Type: Package
+Title: 2013 Fatal Accident Statistics (2013)
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Person1",
+           family = "Creator",
+           role = c("aut", "cre"),
+           email = "person1@fcars.com"),
+    person(given = "Person1",
+           family = "Contributor",
+           role = c("ctb"),
+           email = "person1@fcars.com")
+    )
+Maintainer: Person1 <person1@fcars.com>
+Description: US National Highway Traffic Safety Administration's Fatality Analysis Reporting System data for 2013.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
+Imports:
+    readr,
+    tibble,
+    xfun
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

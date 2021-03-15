@@ -108,6 +108,14 @@ Successfully upgraded from v2.3 to `r packageVersion('rmarkdown')`
 
 1.    Creates a file tests/testthat.R that runs all your tests when R CMD check runs.
 
+Installing on GIT
+https://bookdown.org/rdpeng/RProgDA/version-control-and-github.html
+or push an existing repository from the command line
+git remote add origin https://github.com/gben1750/Fatal-Accidents-Test.git
+git branch -M main
+git push -u origin mai
 
 file.exists("~/.ssh/id_rsa.pub")
+
+
 

@@ -103,9 +103,7 @@ Successfully upgraded from v2.3 to `r packageVersion('rmarkdown')`
 
 ### Testing
 1.    Create a tests/testthat directory.
-
 1.    Adds testthat to the Suggests field in the DESCRIPTION.
-
 1.    Creates a file tests/testthat.R that runs all your tests when R CMD check runs.
 
 Installing on GIT
@@ -118,13 +116,14 @@ git push -u origin main
 
 file.exists("~/.ssh/id_rsa.pub")
 
-Continuous Integration - Travis
-https://r-pkgs.org/r-cmd-check.html
-https://bookdown.org/rdpeng/RProgDA/continuous-integration.html
-To use Travis:
-Run usethis::use_travis() to set up a basic .travis.yml config file.
-Navigate to your Travis account and enable Travis for the repo you want to test.
-Commit and push to GitHub.
-Wait a few minutes to see the results in your email.
+<!-- Continuous Integration - Travis -->
+<!-- https://r-pkgs.org/r-cmd-check.html -->
+<!-- https://bookdown.org/rdpeng/RProgDA/continuous-integration.html -->
+<!-- To use Travis: -->
+<!-- Run usethis::use_travis() to set up a basic .travis.yml config file. -->
+<!-- Navigate to your Travis account and enable Travis for the repo you want to test. -->
+<!-- Commit and push to GitHub. -->
+<!-- (Note: Travis only runs builds on the commits you push after you’ve added a .travis.yml file.) -->
+<!-- Wait a few minutes to see the results in your email. -->
 
 

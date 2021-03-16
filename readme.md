@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+<https://travis-ci.org/gben1750/Fatal-Accidents-Test.svg?branch=main>
 <!-- badges: end -->
 
 The goal of Fatality.Reporting.System is to …

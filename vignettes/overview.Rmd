@@ -110,12 +110,21 @@ Successfully upgraded from v2.3 to `r packageVersion('rmarkdown')`
 
 Installing on GIT
 https://bookdown.org/rdpeng/RProgDA/version-control-and-github.html
+
 or push an existing repository from the command line
 git remote add origin https://github.com/gben1750/Fatal-Accidents-Test.git
 git branch -M main
-git push -u origin mai
+git push -u origin main
 
 file.exists("~/.ssh/id_rsa.pub")
 
+Continuous Integration - Travis
+https://r-pkgs.org/r-cmd-check.html
+https://bookdown.org/rdpeng/RProgDA/continuous-integration.html
+To use Travis:
+Run usethis::use_travis() to set up a basic .travis.yml config file.
+Navigate to your Travis account and enable Travis for the repo you want to test.
+Commit and push to GitHub.
+Wait a few minutes to see the results in your email.
 
 
